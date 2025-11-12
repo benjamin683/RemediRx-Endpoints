@@ -1,3 +1,6 @@
+from pydantic.types import T
+
+
 formDict = {}
 formDict[1] = {
     "userId": "7c68d02b-96e3-4083-b559-300c1e910364",
@@ -9,7 +12,7 @@ formDict[1] = {
     "id": "patientName",
     "t": "Patient Name",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
@@ -17,34 +20,34 @@ formDict[1] = {
     "t": "Gender",
     "type": "checkbox",
     "options": ["Male", "Female"],
-    "req": true
+    "req": True
   },
   {
     "id": "dob",
     "t": "Date of Birth",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "ssn",
     "t": "SSN",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "phone",
     "t": "Phone",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "email",
     "t": "Email",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
 
@@ -54,7 +57,7 @@ formDict[1] = {
     "t": "Drug Allergies",
     "type": "checkbox",
     "options": ["No Known Drug Allergies", "Drug Allergies"],
-    "req": false
+    "req": False
   },
 
   "Packaging Preferences",
@@ -63,14 +66,14 @@ formDict[1] = {
     "t": "Packaging Type",
     "type": "checkbox",
     "options": ["VIMP", "Bottles", "Spanish"],
-    "req": false
+    "req": False
   },
   {
     "id": "ezCaps",
     "t": "Patient requests EZ caps",
     "type": "checkbox",
     "options": ["Yes", "No"],
-    "req": false
+    "req": False
   },
 
   "Shipping Address",
@@ -78,35 +81,35 @@ formDict[1] = {
     "id": "shippingStreet",
     "t": "Street",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "shippingCounty",
     "t": "County",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "shippingCity",
     "t": "City",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "shippingState",
     "t": "State",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "shippingZip",
     "t": "ZIP Code",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
 
@@ -115,35 +118,35 @@ formDict[1] = {
     "id": "billingStreet",
     "t": "Street",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "billingCounty",
     "t": "County",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "billingCity",
     "t": "City",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "billingState",
     "t": "State",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "billingZip",
     "t": "ZIP Code",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
 
@@ -153,13 +156,13 @@ formDict[1] = {
     "t": "Do you manage your own medications?",
     "type": "checkbox",
     "options": ["Yes", "No"],
-    "req": true
+    "req": True
   },
   {
     "id": "medManagerName",
     "t": "Medication Manager Name",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": "",
     "when": [
       {
@@ -173,7 +176,7 @@ formDict[1] = {
     "id": "medManagerRelationship",
     "t": "Relationship to Patient",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": "",
     "when": [
       {
@@ -187,7 +190,7 @@ formDict[1] = {
     "id": "medManagerPhone",
     "t": "Medication Manager Phone",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": "",
     "when": [
       {
@@ -201,7 +204,7 @@ formDict[1] = {
     "id": "medManagerEmail",
     "t": "Medication Manager Email",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": "",
     "when": [
       {
@@ -227,20 +230,20 @@ formDict[2] = {
     "t": "Monthly Contact is",
     "type": "checkbox",
     "options": ["Patient", "Family Member", "Other Caregiver"],
-    "req": true
+    "req": True
   },
   {
     "id": "contactAware",
     "t": "Contact is aware we must speak with them monthly and understands service may be interrupted if we are unable to contact them",
     "type": "checkbox",
     "options": ["Yes", "No"],
-    "req": true
+    "req": True
   },
   {
     "id": "contactName",
     "t": "Contact Name (if other than Patient)",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": "",
     "when": [
       {
@@ -256,14 +259,14 @@ formDict[2] = {
     "id": "contactHomePhone",
     "t": "Home Phone",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "contactCellPhone",
     "t": "Cell Phone",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
@@ -271,14 +274,14 @@ formDict[2] = {
     "t": "Preferred Contact Phone",
     "type": "checkbox",
     "options": ["Home Phone", "Cell Phone"],
-    "req": true
+    "req": True
   },
 
   {
     "id": "contactEmail",
     "t": "Email Address",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   }
 ]
@@ -295,14 +298,14 @@ formDict[3] = {
     "id": "medicareNumber",
     "t": "Medicare #",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "medicaidNumber",
     "t": "Medicaid #",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
 
@@ -311,42 +314,42 @@ formDict[3] = {
     "id": "insurance1Name",
     "t": "Insurance 1 - Name",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "insurance1Id",
     "t": "Insurance 1 - ID #",
     "type": "string",
-    "req": true,
+    "req": True,
     "value": ""
   },
   {
     "id": "insurance1RxBin",
     "t": "Insurance 1 - RX BIN",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "insurance1RxPcn",
     "t": "Insurance 1 - RX PCN",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "insurance1RxGroup",
     "t": "Insurance 1 - RX GROUP",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "insurance1Phone",
     "t": "Insurance 1 - Customer Service Phone Number",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
 
@@ -355,42 +358,42 @@ formDict[3] = {
     "id": "insurance2Name",
     "t": "Insurance 2 - Name",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "insurance2Id",
     "t": "Insurance 2 - ID #",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "insurance2RxBin",
     "t": "Insurance 2 - RX BIN",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "insurance2RxPcn",
     "t": "Insurance 2 - RX PCN",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "insurance2RxGroup",
     "t": "Insurance 2 - RX GROUP",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   },
   {
     "id": "insurance2Phone",
     "t": "Insurance 2 - Customer Service Phone Number",
     "type": "string",
-    "req": false,
+    "req": False,
     "value": ""
   }
 ]
