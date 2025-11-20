@@ -3,7 +3,7 @@ from email.message import EmailMessage
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Any
-from forms import formDict
+from forms import formDict, userDict
 
 app = FastAPI()
 
@@ -37,6 +37,12 @@ def send_email():
         print(f"Failed to send email: {e}")
     return
 
+@app.post("/get_details")
+def get_name(data: dict[Any, Any]):
+    patient_id = data["patient_id"]
+
+    patient_details = userDict[patient_id]
+    return patient_details
 
 @app.post("/begin_session")
 def begin_session():
