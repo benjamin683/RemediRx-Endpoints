@@ -16,28 +16,6 @@ pageNumber = 0
 
 RECIPIENT_EMAIL = ""
 
-# def deliver_email():
-#     msg = EmailMessage()
-#     msg['Subject'] = "Agreement Form"
-#     msg['From'] = EMAIL_ADDRESS
-#     msg['To'] = RECIPIENT_EMAIL
-#     msg.set_content("Please fill out the pharmacy agreement at your earliest convenience. Thank you!")
-
-#     with open(f"PharmacyAgreement.pdf", "rb") as f:
-#         file_data = f.read()
-#         file_name = f.name
-#     msg.add_attachment(file_data, maintype="application", subtype="pdf", filename=file_name)
-
-#     try:
-#         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
-#             server.starttls()
-#             server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-#             server.send_message(msg)
-#         print("Email sent successfully")
-#     except Exception as e:
-#         print(f"Failed to send email: {e}")
-#     return
-
 def send_sendgrid_email():
     SENDGRID_EMAIL_ENDPOINT = "https://api.sendgrid.com/v3/mail/send"
     FILE_PATH = "PharmacyAgreement.pdf"
@@ -172,6 +150,6 @@ def end_session():
     global pageNumber
     pageNumber = len(formDict)
 
-    deliver_email()
+    send_sendgrid_email()
     return { "message": f"All information has been submitted. Agreement form has been sent to {RECIPIENT_EMAIL}"}
 
