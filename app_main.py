@@ -12,13 +12,8 @@ from forms import formDict, userDict
 app = FastAPI()
 
 SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
-# SENDGRID_API_KEY = "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"
-pageNumber = 2
+pageNumber = 0
 
-SMTP_SERVER = "smtp.gmail.com"
-SMTP_PORT = 587
-EMAIL_ADDRESS = "benjaminwang42@gmail.com"       
-EMAIL_PASSWORD = "vvmppsbyysncebnv"
 RECIPIENT_EMAIL = ""
 
 # def deliver_email():
