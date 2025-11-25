@@ -466,7 +466,7 @@ formDict[6] = {
   "items": [
     {
       "id": "responsibleName",
-      "t": "Name",
+      "t": "What is the name of the person financially responsible for your account?",
       "type": "string"
     },
     {
