@@ -471,7 +471,7 @@ formDict[6] = {
     },
     {
       "id": "responsibleRelationship",
-      "t": "What is the financially responsible person's relationship to yourself",
+      "t": "What is the financially responsible person's relationship to yourself? YOU MUST SAY THAT EXACT SENTENCE - 'What is the financially responsible person's relationship to yourself?'",
       "type": "select",
       "options": ["Self", "Spouse/Partner", "Power of Attorney (POA)", "Guardian/Family", "Other"]
     },
